@@ -8,4 +8,4 @@ I created a smart door-lock system using RFID technology and Arduino microcontro
 4. Keycard
 5. LCD
 # Design Preview
-![alt text]([images/Final Project Report.jpg](https://github.com/Bintang-Satwika/AUTOMATIC-DOOR-LOCK-SYSTEM-WITH-RFID-SENSOR/blob/main/images/Final%20Project%20Report.jpg)https://github.com/Bintang-Satwika/AUTOMATIC-DOOR-LOCK-SYSTEM-WITH-RFID-SENSOR/blob/main/images/Final%20Project%20Report.jpg?raw=true)
+![alt text](https://github.com/Bintang-Satwika/AUTOMATIC-DOOR-LOCK-SYSTEM-WITH-RFID-SENSOR/blob/c8415bbb903748f556aa17c7a9cee81db8877475/images/Final%20Project%20Report.jpg?raw=true)
