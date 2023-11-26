@@ -8,4 +8,4 @@ I created a smart door-lock system using RFID technology and Arduino microcontro
 4. Keycard
 5. LCD
 # Design Preview
-images/Final Project Report.jpg
+![alt text](images/Final Project Report.jpg?raw=true)
