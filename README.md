@@ -10,7 +10,7 @@ Prototype For Automatic Door Lock System With RFID Sensor using Arduino microcon
 7. buzzer
 # Pin SD CARD
 - Arduino Mega-> CS : 4, SCK (CLK): 50, MOSI: 51, MISO: 50, VCC = 5 volt
-- Arduino-> CS : 4, SCK (CLK): 13, MOSI: 11, MISO: 12, VCC = 5 volt
+- Arduino Uno-> CS : 4, SCK (CLK): 13, MOSI: 11, MISO: 12, VCC = 5 volt
 # Pin RTC DS3231 and  LCD 1602A I2C
 - Arduino Mega-> SCL : SCL, SDA: SDA, Vcc= 5 Volt
 - Arduino Uno-> SCL: A5, SDA: A4, Vcc= 5 Volt
