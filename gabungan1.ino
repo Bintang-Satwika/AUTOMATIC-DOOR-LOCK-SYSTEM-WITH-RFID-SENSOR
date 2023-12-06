@@ -99,6 +99,8 @@ void loop() {
       servo.write(0);
       delay(50);
       lock=1;
+      state = true;
+      live_logging=1;
       for (int i = 0; i < 2; i++) {
         tone(Buzzer, 2000);
         delay(250);
