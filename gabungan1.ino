@@ -17,7 +17,7 @@ File    myFile;
 MFRC522 mfrc522(SS_PIN, RST_PIN);
 String MasterTag = "73 6C C8 12"; // Enter you tag UID which we get it from first code. 
 
-String UIDCard = "###";
+String UIDCard = "";
 
 int lock=1;
 int live_logging=0;
