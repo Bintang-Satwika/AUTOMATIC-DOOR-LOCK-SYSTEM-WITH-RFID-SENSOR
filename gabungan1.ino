@@ -125,8 +125,6 @@ void loop() {
     lcd.setCursor(0, 1);
     lcd.print("Scan Your Card");
     loop_logging();
-    delay(1000);
-    
   }
   
 }
@@ -161,7 +159,7 @@ void setup_logging(){
         myFile = SD.open("LOG.txt", FILE_WRITE);
         if(myFile) {
           Serial.println(F("'LOG.txt' file created."));        
-          myFile.println("Date & Time, Temperature");
+          myFile.println("Date & Time, ID CARD");
           myFile.close();
         }
         else
@@ -177,14 +175,12 @@ void loop_logging(){
   if (myFile) {
     sprintf(buffer1, "Date: %s, Time: %s, Day of the Week: %s ", rtc.getDateStr(), rtc.getTimeStr(), rtc.getDOWStr());
     Serial.println(buffer1);
-    // Serial.print(rtc.getTemp());
-    //Serial.print(char(176));
-   // Serial.println("C");
-
+    // SAVE TO SD CARD
     myFile.print(rtc.getDateStr());
     myFile.print(" ");
-
     myFile.print(rtc.getTimeStr());
+    myFile.print(",");
+    //myFile.print(UIDCard);
     myFile.close();
   }
   else {
