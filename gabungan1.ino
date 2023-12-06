@@ -145,9 +145,9 @@ void setup_logging(){
   rtc.begin();
   
   // Setting tanggal dan waktu pertama program
-  rtc.setDate(22, 11, 2022);   // Sesuaikan tanggal dengan tanggal praktikum Anda (dd, mm, yyyy)
+  rtc.setDate(06, 12, 2023);   // Sesuaikan tanggal dengan tanggal praktikum Anda (dd, mm, yyyy)
   rtc.setTime(11, 02, 00);     // Sesuaikan jam dengan waktu Anda (hh, mm, ss)
-  rtc.setDOW(TUESDAY);     // Sesuaikan hari dengan hari Anda praktikum (SUNDAY, MONDAY, etc.)
+  rtc.setDOW(WEDNESDAY);     // Sesuaikan hari dengan hari Anda praktikum (SUNDAY, MONDAY, etc.)
 
   Serial.print(F("Initializing SD card..."));
  
@@ -177,9 +177,9 @@ void loop_logging(){
   char buffer1[12], tempStr[6];
   myFile = SD.open("LOG.txt", FILE_WRITE);
   if (myFile) {
-    sprintf(buffer1, "Date: %s, Time: %s, Day of the Week: %s, Temperature: ", rtc.getDateStr(), rtc.getTimeStr(), rtc.getDOWStr());
+    sprintf(buffer1, "Date: %s, Time: %s, Day of the Week: %s ", rtc.getDateStr(), rtc.getTimeStr(), rtc.getDOWStr());
     Serial.print(buffer1);
-    Serial.print(rtc.getTemp());
+    // Serial.print(rtc.getTemp());
     Serial.print(char(176));
     Serial.println("C");
 
