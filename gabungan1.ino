@@ -17,10 +17,10 @@ File    myFile;
 MFRC522 mfrc522(SS_PIN, RST_PIN);
 String MasterTag = "73 6C C8 12"; // Enter you tag UID which we get it from first code. 
 
-String UIDCard = "";
+String UIDCard = "###";
 
 int lock=1;
-
+bool state=false;
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 Servo servo;
@@ -81,6 +81,7 @@ void loop() {
       servo.write(100);
       delay(50);
       lock=0;
+      state = true;
       for (int i = 0; i < 2; i++) {
         tone(Buzzer, 2000);
         delay(250);
@@ -96,6 +97,7 @@ void loop() {
       servo.write(0);
       delay(50);
       lock=1;
+      state=false;
       for (int i = 0; i < 2; i++) {
         tone(Buzzer, 2000);
         delay(250);
@@ -180,7 +182,9 @@ void loop_logging(){
     myFile.print(" ");
     myFile.print(rtc.getTimeStr());
     myFile.print(",");
-    //myFile.print(UIDCard);
+    myFile.print(UIDCard);
+    myFile.print(",");
+    myFILE.print(state);
     myFile.close();
   }
   else {
