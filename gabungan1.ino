@@ -20,6 +20,7 @@ String MasterTag = "73 6C C8 12"; // Enter you tag UID which we get it from firs
 String UIDCard = "###";
 
 int lock=1;
+int live_logging=0;
 bool state=false;
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
@@ -82,6 +83,7 @@ void loop() {
       delay(50);
       lock=0;
       state = true;
+      live_logging=1;
       for (int i = 0; i < 2; i++) {
         tone(Buzzer, 2000);
         delay(250);
@@ -97,7 +99,6 @@ void loop() {
       servo.write(0);
       delay(50);
       lock=1;
-      state=false;
       for (int i = 0; i < 2; i++) {
         tone(Buzzer, 2000);
         delay(250);
@@ -110,6 +111,8 @@ void loop() {
       lcd.print(" Access Denied!");
       digitalWrite(YellowLED, LOW);
       digitalWrite(GreenLED, LOW);
+      state=false;
+      live_logging=1;
       tone(Buzzer, 2000);
       for(int i = 0; i < 3;i++){
         digitalWrite(RedLED, HIGH);
@@ -119,14 +122,15 @@ void loop() {
         }
       noTone(Buzzer);
     }
-
+    if(live_logging=1){
+      loop_logging();
+      live_logging=0;
+        }
     delay(1000);
-
     lcd.clear();
     lcd.print(" Access Control ");
     lcd.setCursor(0, 1);
     lcd.print("Scan Your Card");
-    loop_logging();
   }
   
 }
