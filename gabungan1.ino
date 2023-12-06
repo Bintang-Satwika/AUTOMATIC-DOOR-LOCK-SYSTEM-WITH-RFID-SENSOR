@@ -190,7 +190,7 @@ void loop_logging(){
     myFile.print(",");
     myFile.print(UIDCard);
     myFile.print(",");
-    myFILE.print(state);
+    myfile.print(state);
     myFile.close();
   }
   else {
