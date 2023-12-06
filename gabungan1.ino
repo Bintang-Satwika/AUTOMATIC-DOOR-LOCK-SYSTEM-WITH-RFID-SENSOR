@@ -137,8 +137,6 @@ void setup_logging(){
   }
   
   // Menuliskan ke serial monitor
-  Serial.println(F("Program 3: Data Logging"));
-  Serial.println(F("Praktikum Sistem Benam (Embedded System)"));
   Serial.println(F(" "));
   delay(500);
   
