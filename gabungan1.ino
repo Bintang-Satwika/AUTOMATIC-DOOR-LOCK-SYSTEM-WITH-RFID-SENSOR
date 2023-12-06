@@ -178,18 +178,15 @@ void loop_logging(){
   myFile = SD.open("LOG.txt", FILE_WRITE);
   if (myFile) {
     sprintf(buffer1, "Date: %s, Time: %s, Day of the Week: %s ", rtc.getDateStr(), rtc.getTimeStr(), rtc.getDOWStr());
-    Serial.print(buffer1);
+    Serial.println(buffer1);
     // Serial.print(rtc.getTemp());
-    Serial.print(char(176));
-    Serial.println("C");
+    //Serial.print(char(176));
+   // Serial.println("C");
 
     myFile.print(rtc.getDateStr());
     myFile.print(" ");
 
     myFile.print(rtc.getTimeStr());
-    myFile.print(",");
-     
-    myFile.println(rtc.getTemp(), 2);
     myFile.close();
   }
   else {
