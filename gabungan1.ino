@@ -27,7 +27,7 @@ Servo servo;
 
 #define YellowLED  2
 #define GreenLED 3
-#define RedLED 4
+#define RedLED 6
 
 #define Buzzer 7
 void setup() {
