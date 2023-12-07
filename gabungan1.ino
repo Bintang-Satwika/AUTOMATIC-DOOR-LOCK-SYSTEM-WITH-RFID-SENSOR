@@ -1,4 +1,3 @@
-#include <SPI.h>
 #include <MFRC522.h>
 #include <LiquidCrystal_I2C.h>
 #include <Servo.h>
