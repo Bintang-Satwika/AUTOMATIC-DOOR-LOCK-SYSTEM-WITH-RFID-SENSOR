@@ -178,11 +178,11 @@ void setup_logging(){
   }
 
 void loop_logging(){
-  char buffer1[12], tempStr[6];
+  char buffer1[50], tempStr[6];
   myFile = SD.open("LOG.txt", FILE_WRITE);
   if (myFile) {
-    sprintf(buffer1, "Date: %s, Time: %s, Day of the Week: %s ", rtc.getDateStr(), rtc.getTimeStr(), rtc.getDOWStr());
-    Serial.println(buffer1);
+    sprintf(buffer1, "Date: %s, Time: %s, Day of the Week: %s, UIDCARD: %s, boolean: %s,", rtc.getDateStr(), rtc.getTimeStr(), rtc.getDOWStr(), UIDCard, state);
+    Serial.print(buffer1);
     // SAVE TO SD CARD
     myFile.print(rtc.getDateStr());
     myFile.print(" ");
@@ -190,7 +190,7 @@ void loop_logging(){
     myFile.print(",");
     myFile.print(UIDCard);
     myFile.print(",");
-    myfile.print(state);
+    myFile.print(state);
     myFile.close();
   }
   else {
