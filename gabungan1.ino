@@ -61,7 +61,7 @@ void setup() {
   rtc.begin();
   rtc.setDOW(FRIDAY);     // Set Day-of-Week to SUNDAY
   rtc.setTime(15, 56, 0);     
-  rtc.setDate(08, 12, 2023);   
+  rtc.setDate(8, 12, 2023);   
   
   //  SD CARD INISIASI
   Serial.print(F("Initializing SD card..."));
