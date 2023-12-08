@@ -60,7 +60,7 @@ void setup() {
   // RTC MODULE INISIASI
   rtc.begin();
   rtc.setDOW(FRIDAY);     // Set Day-of-Week to SUNDAY
-  rtc.setTime(15, 56, 0);     
+  rtc.setTime(22, 55, 0);     
   rtc.setDate(8, 12, 2023);   
   
   //  SD CARD INISIASI
@@ -98,7 +98,6 @@ void loop() {
   while(getUID()){
     Serial.print("UID: ");
     Serial.println(UIDCard);
-    loop_logging(); // DATA LOGGING
     lcd.clear();
     lcd.setCursor(2, 0);
     lcd.print("Permission");
@@ -149,6 +148,8 @@ void loop() {
         }
       noTone(Buzzer);
     }
+    Serial.println("state: "+String(state));
+    loop_logging(); // DATA LOGGING
     delay(1000);
     lcd.clear();
     lcd.print(" Access Control ");
@@ -168,6 +169,7 @@ void loop_logging(){
     Serial.print(buffer1);
     // Serial.print("ID CARD:" +String(UIDCard));
     // SAVE TO SD CARD
+    myFile.print("\n");
     myFile.print(rtc.getDateStr());
     myFile.print(" ");
     myFile.print(rtc.getTimeStr());
@@ -175,7 +177,6 @@ void loop_logging(){
     myFile.print(String(UIDCard));
     myFile.print(",");
     myFile.print(String(state));
-    myFile.print("\n");
     myFile.close();
   }
   else Serial.println(F("Error opening LOG.txt")); 
