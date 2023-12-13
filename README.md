@@ -1,13 +1,17 @@
-# PROTOTYPE AUTOMATIC-DOOR-LOCK-SYSTEM-WITH-RFID-SENSOR
-Prototype For Automatic Door Lock System With RFID Sensor using Arduino microcontrollers as the transmitter and receiver for door locking and unlocking. I was responsible for both the code and hardware. Input from the device is acquired through an RFID sensor, which properly scans the unique ID card.
+# AUTOMATIC-DOOR-LOCK-SYSTEM-WITH-RFID-SENSOR
+Automatic Door Lock System With RFID Sensor using Arduino microcontrollers as the transmitter and receiver for door locking and unlocking. I was responsible for both the code and hardware. Input from the device is acquired through an RFID sensor, which properly scans the unique ID card.
 # Required Components
-1. Arduino Mega 2560
+1. Arduino Mega 2560 or Arduino Uno or ESP32
 2. RFID Module
 3. Micro Servo
 4. Keycard
 5. LCD
 6. LED light
 7. buzzer
+8. SD CARD
+9. RTC DS3231
+10. LCD 1602A I2C
+11. Breadboard
 # Pin SD CARD
 - Arduino Mega-> CS : 4, SCK (CLK): 52, MOSI: 51, MISO: 50, VCC = 5 volt
 - Arduino Uno-> CS : 4, SCK (CLK): 13, MOSI: 11, MISO: 12, VCC = 5 volt
