@@ -28,5 +28,7 @@ Automatic Lock System with RFID Sensor uses microcontrollers as the transmitter 
 # Design Preview
 ![alt text](images/skematik_26_TV.jpg)
 # Prototype in real world
-![alt text](images/rangkaian_1_26_TV.jpg)
-![alt text](images/rangkaian_2_26_TV.jpg)
+![rangkaian_1_26_TV](https://github.com/Bintang-Satwika/AUTOMATIC-DOOR-LOCK-SYSTEM-WITH-RFID-SENSOR/assets/87467666/6e6b60bd-9db4-4f6d-9eb7-251924b5b021)
+![rangkaian_2_26_TV](https://github.com/Bintang-Satwika/AUTOMATIC-DOOR-LOCK-SYSTEM-WITH-RFID-SENSOR/assets/87467666/90d56108-6bf5-4ff0-9990-f812c40eb91a)
+
+
