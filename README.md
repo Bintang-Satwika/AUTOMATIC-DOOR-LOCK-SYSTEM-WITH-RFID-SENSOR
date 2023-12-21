@@ -28,7 +28,7 @@ Automatic Lock System with RFID Sensor uses microcontrollers as the transmitter 
 # Design Preview
 ![alt text](Proyek_Akhir/Skematik_rangkaian.png)
 # Prototype in real world
-![alt text](Proyek_Akhir/Brankas_depan.png)
-![alt text](Proyek_Akhir/Brankas_dalam.png)
+![alt text](Proyek_Akhir/Brankas_depan.jpg)
+![alt text](Proyek_Akhir/Brankas_dalam.jpg)
 
 
